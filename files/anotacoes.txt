@@ -96,3 +96,17 @@ NOME DA TABELA CRIADA = NOME DA MEDIDA(TB [COLUNA])
 --------------------------------------------------------
 
 POWER QUERY -> AMBIENTE DE TRATAMENTO DE DADOS
+
+
+
+-------------------------------------------------------
+ENTENDENDO HIRARQUIA
+
+POWER QUERY
+RELATORIO
+
+OBS: TUDO QUE FAÇO NO POWER QUERY REFLETE NO RELÁTORIO, PORÉM NEM TUDO QUE FAÇO NO RELATÓRIO REFLETE NO POWER QUERY
+
+_____________________________________________________________
+
+
