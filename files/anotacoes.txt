@@ -67,6 +67,30 @@ relatórios Operacionais   |   Business Intelligence   |   Análises Avançadas 
 
 
 
------FORMULAS EXECEL/LIBREOFFICE---
+-----FORMULAS EXECEL/LIBREOFFICE----
 =MÉDIA(C2:C21);
 =MÉDIASE(tb_rh[SEXO];"FEM";tb_rh[IDADE]);
+
+
+-----FUNÇÕES POWERBI----> DAX DATA ANALYSIS EXPRESSIONS
+https://learn.microsoft.com/pt-br/dax/dax-overview
+
+
+
+EXECEL                                                                 POWER BI
+
+FAZER UMA SOMA: SOMA                                                   SUM
+FAZER A MÉDIA: MEDIA                                                   AVERAGE
+CONTAR UMA COLUNA QUE TEM VALOR CONT.VALORES||CONT.NUM                 COUNTA||COUNT
+VALOR LÓGICO: SE                                                       IF
+
+
+-------------------------------------------------------
+
+CÁLCULOS CUSTOMIZADOS
+
+DADOS-> NOVA MEDIDA -> FAZER O DAX
+
+NOME DA TABELA CRIADA = NOME DA MEDIDA(TB [COLUNA])
+
+--------------------------------------------------------
