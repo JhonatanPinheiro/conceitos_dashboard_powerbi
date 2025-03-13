@@ -1,0 +1,72 @@
+Tirando em formato de Tabela
+
+    ctrl + t
+
+    Opção: Design da Tabela -> Converter em intervalo
+
+
+Colocando em formato de Tabela
+
+    ctrl + t
+
+    Opção: Formatar como tabela
+
+
+O que é POWER BI? 
+O Power BI é uma ferramenta da MICROSOFT de análise de negócios que permite que você visualize seus dados de forma mais amigável através de criação de Dashboard
+
+-> Power BI
+-> Power APP
+-> Power Automate
+-> Power Virtual Agents
+
+OLTP 
+    -> Sistemas que tratam o negócio
+    -> Enfase nas operações do negócio
+    -> Base dos ambientes transacionais
+    -> Niveis Operacional
+    -> Gerenciamento concorrência
+
+|Incluir|Atualizar|Eliminar|
+
+
+OLAP
+-> Sistemas que analisam o negócio
+-> Base dos ambientes de Data Warehouse
+-> Frequentemente faz uso de dados histórico
+-> Integra dados de diferentes processos
+-> Sistemas de apoio a dicisão (DSS)
+-> Visão analítica do negócio
+-> Consulta é a principal atividade
+-> Os dados são consistentes e histórico
+-> Analisam-se tedências e padrões a partir de grande quantidade de dados
+
+|Carga|Acesso|
+
+OLTP (Online Transaction Processing) e OLAP são sistemas de processamento de dados que se complementam para otimizar o valor dos dados. O OLTP é voltado para as operações diárias, enquanto o OLAP é voltado para análises e relatórios. 
+O OLAP combina e agrupa os dados para que você possa analisá-los de diferentes pontos de vista. Por outro lado, o OLTP armazena e atualiza dados transacionais de forma confiável e eficiente em grandes volumes. Os bancos de dados do OLTP podem ser uma das várias fontes de dados de um sistema OLAP.
+
+TABELA FATO: São tabelas que existe registros duplicados
+TABELA DIMENSÃO: São tabelas que não possui registros duplicados e são registros únicos apenas
+
+
+ABORDAGEM DE IMPLEMENTAÇÃO DE SOLUÇÕES DE BUSINESS INTELLIGENCE
+FASE 1 - Definição do BI project Scope
+FASE 2 - Identificação das fontes de dados
+FASE 3 - Conversão da "Raw Data" em Right Data
+FASE 4 - Criação dos Mecanismos ETL para Eliminar os modelos
+FASE 5 - Modelização e Criação das Vistar
+FASE 6 - Estratégia de Distribuição e difusão
+FASE 7 - Avaliação da eficácia dos relatórios / reportingd
+
+
+                                |ESTÁGIO DE MATURIDADE DO BI|
+
+FASE INICIAL              |   CRESCIMENTO             |   MATURIDADE                      EXELÊNCIA
+relatórios Operacionais   |   Business Intelligence   |   Análises Avançadas              Análises Preditivas e Prescritivas
+
+
+
+-----FORMULAS EXECEL/LIBREOFFICE---
+=MÉDIA(C2:C21);
+=MÉDIASE(tb_rh[SEXO];"FEM";tb_rh[IDADE]);
