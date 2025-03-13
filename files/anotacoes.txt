@@ -94,3 +94,5 @@ DADOS-> NOVA MEDIDA -> FAZER O DAX
 NOME DA TABELA CRIADA = NOME DA MEDIDA(TB [COLUNA])
 
 --------------------------------------------------------
+
+POWER QUERY -> AMBIENTE DE TRATAMENTO DE DADOS
