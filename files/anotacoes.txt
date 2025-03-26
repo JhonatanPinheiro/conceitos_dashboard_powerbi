@@ -110,3 +110,101 @@ OBS: TUDO QUE FAÇO NO POWER QUERY REFLETE NO RELÁTORIO, PORÉM NEM TUDO QUE FA
 _____________________________________________________________
 
 
+OPÇÕES 
+
+EXTERNA ESQUERDA (TODAS A PARTIR DA PRIMEIRA,CORRESPONDE A PARTIR DA SEGUNDA)
+EXTERNA ESQUERDA (TODAS A PARTIR DA SEGUNDA,CORRESPONDE A PARTIR DA PRIMEIRA)
+
+
+EXTERNA COMPLETA (TODAS AS LINHAS DE AMBOS)
+INTERNA (APENAS LINHAS CORRESPONDENTES)
+
+ANTI ESQUERDA (LINHAS APENAS NA PRIMAIRA)
+ANTI DIREITA (LINHAS APENAS NA SEGUNDA)
+
+
+-------------------------------------EXPLICAÇÃO-----------------------------
+
+| EXTERNA ESQUERDA (TODAS A PARTIR DA PRIMEIRA,CORRESPONDE A PARTIR DA SEGUNDA) |
+
+1. Externa Esquerda (Left Outer Join) – Todas a partir da primeira, corresponde a partir da segunda
+Explicação:
+Essa relação traz todas as linhas da tabela da esquerda (primeira) e as linhas correspondentes da tabela da direita (segunda). Se não houver correspondência na tabela da direita, serão preenchidas com valores nulos (NULL). Ou seja, ela garante que todas as informações da primeira tabela (esquerda) sejam mantidas, com os dados correspondentes da segunda tabela quando houver, mas sem perder nenhuma linha da primeira tabela.
+
+Exemplo:
+Se você tem uma lista de clientes (tabela da esquerda) e uma lista de pedidos (tabela da direita), essa relação traria todos os clientes, independentemente de terem ou não feito pedidos.
+
+
+
+
+
+EXTERNA ESQUERDA (TODAS A PARTIR DA SEGUNDA,CORRESPONDE A PARTIR DA PRIMEIRA)
+EXPLICAÇÃO:
+2. Externa Esquerda (Left Outer Join) – Todas a partir da segunda, corresponde a partir da primeira
+Explicação:
+Essa é uma variação do "exterior esquerda", mas com as tabelas invertidas. Neste caso, todas as linhas da tabela da direita (segunda) são mantidas, e os dados correspondentes da tabela da esquerda (primeira) são mostrados quando encontrados. Quando não houver correspondência na tabela da esquerda, as colunas da tabela da esquerda serão preenchidas com valores nulos (NULL).
+
+Exemplo:
+Se você tem uma lista de pedidos (tabela da direita) e uma lista de clientes (tabela da esquerda), essa relação traria todos os pedidos, mesmo que não haja um cliente correspondente. Porém, as informações do cliente ficariam em branco (NULL) para pedidos sem cliente.
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Resumo das Diferenças:
+1ª Opção (Externa Esquerda – Todas a partir da primeira): Retorna todas as linhas da tabela da esquerda e apenas as correspondências da tabela da direita, preenchendo com NULL onde não há correspondência na tabela da direita.
+
+2ª Opção (Externa Esquerda – Todas a partir da segunda): Retorna todas as linhas da tabela da direita e apenas as correspondências da tabela da esquerda, preenchendo com NULL onde não há correspondência na tabela da esquerda.
+
+Em ambos os casos, a tabela da direita é a tabela que tem valores nulos quando não há correspondência, mas as ordens das tabelas na relação alteram o comportamento da consulta.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+EXTERNA COMPLETA (TODAS AS LINHAS DE AMBOS)
+EXPLICAÇÃO:
+3. Externa Completa (Full Outer Join) – Todas as linhas de ambos
+Explicação:
+Com essa relação, o Power BI trará todas as linhas de ambas as tabelas, independentemente de existirem ou não correspondências. Quando não houver correspondência, os valores da tabela que não tem dados correspondentes serão preenchidos com valores nulos (NULL). Ou seja, você mantém todos os dados de ambas as tabelas.
+
+Exemplo:
+Se você tem uma lista de clientes (tabela da esquerda) e uma lista de pedidos (tabela da direita), essa relação traria todos os clientes e todos os pedidos, inclusive aqueles clientes sem pedidos e aqueles pedidos sem clientes.
+
+
+
+
+INTERNA (APENAS LINHAS CORRESPONDENTES)
+EXPLICAÇÃO:
+4. Interna (Inner Join) – Apenas linhas correspondentes
+Explicação:
+Essa relação trará apenas as linhas que têm correspondência entre as duas tabelas. Ou seja, ele combina os dados das duas tabelas apenas quando existe um valor correspondente na chave de ambas. Caso contrário, as linhas são descartadas. Esse tipo de relacionamento é útil quando você deseja analisar apenas os dados que existem em ambas as tabelas.
+
+Exemplo:
+Se você tem uma lista de clientes (tabela da esquerda) e uma lista de pedidos (tabela da direita), a relação interna traria apenas os clientes que fizeram pedidos, descartando os clientes sem pedidos e os pedidos sem cliente.
+
+
+
+
+
+ANTI ESQUERDA (LINHAS APENAS NA PRIMAIRA)
+EXPLICAÇÃO:
+5. Anti Esquerda (Left Anti Join) – Linhas apenas na primeira
+Explicação:
+Esse tipo de relação retorna apenas as linhas da tabela da esquerda (primeira) que não têm correspondência na tabela da direita (segunda). Ou seja, ele retorna as linhas da tabela da esquerda que não têm correspondência na tabela da direita, filtrando tudo o que tem correspondência. É útil para encontrar registros exclusivos de uma tabela.
+
+Exemplo:
+Se você tem uma lista de clientes (tabela da esquerda) e uma lista de pedidos (tabela da direita), a relação anti esquerda traria apenas os clientes que não fizeram pedidos.
+
+
+
+
+
+ANTI DIREITA (LINHAS APENAS NA SEGUNDA)
+EXPLICAÇÃO:
+6. Anti Direita (Right Anti Join) – Linhas apenas na segunda
+Explicação:
+Semelhante ao anti esquerda, mas neste caso, ele retorna apenas as linhas da tabela da direita (segunda) que não têm correspondência na tabela da esquerda (primeira). Ou seja, ele filtra todos os registros da tabela da direita que não possuem correspondência na tabela da esquerda. Esse tipo de relação é útil para encontrar registros exclusivos de uma tabela.
+
+Exemplo:
+Se você tem uma lista de pedidos (tabela da direita) e uma lista de clientes (tabela da esquerda), a relação anti direita traria apenas os pedidos que não têm um cliente correspondente.
+
+
+
+
