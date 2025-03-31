@@ -113,7 +113,7 @@ _____________________________________________________________
 OPÇÕES 
 
 EXTERNA ESQUERDA (TODAS A PARTIR DA PRIMEIRA,CORRESPONDE A PARTIR DA SEGUNDA)
-EXTERNA ESQUERDA (TODAS A PARTIR DA SEGUNDA,CORRESPONDE A PARTIR DA PRIMEIRA)
+EXTERNA DIREITA (TODAS A PARTIR DA SEGUNDA,CORRESPONDE A PARTIR DA PRIMEIRA)
 
 
 EXTERNA COMPLETA (TODAS AS LINHAS DE AMBOS)
@@ -138,21 +138,20 @@ Se você tem uma lista de clientes (tabela da esquerda) e uma lista de pedidos (
 
 
 
-EXTERNA ESQUERDA (TODAS A PARTIR DA SEGUNDA,CORRESPONDE A PARTIR DA PRIMEIRA)
+EXTERNA DIREITA (TODAS A PARTIR DA SEGUNDA,CORRESPONDE A PARTIR DA PRIMEIRA)
 EXPLICAÇÃO:
-2. Externa Esquerda (Left Outer Join) – Todas a partir da segunda, corresponde a partir da primeira
+2. Externa Direita (Left Outer Join) – Todas a partir da segunda, corresponde a partir da primeira
 Explicação:
 Essa é uma variação do "exterior esquerda", mas com as tabelas invertidas. Neste caso, todas as linhas da tabela da direita (segunda) são mantidas, e os dados correspondentes da tabela da esquerda (primeira) são mostrados quando encontrados. Quando não houver correspondência na tabela da esquerda, as colunas da tabela da esquerda serão preenchidas com valores nulos (NULL).
 
 Exemplo:
 Se você tem uma lista de pedidos (tabela da direita) e uma lista de clientes (tabela da esquerda), essa relação traria todos os pedidos, mesmo que não haja um cliente correspondente. Porém, as informações do cliente ficariam em branco (NULL) para pedidos sem cliente.
 
-
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Resumo das Diferenças:
 1ª Opção (Externa Esquerda – Todas a partir da primeira): Retorna todas as linhas da tabela da esquerda e apenas as correspondências da tabela da direita, preenchendo com NULL onde não há correspondência na tabela da direita.
 
-2ª Opção (Externa Esquerda – Todas a partir da segunda): Retorna todas as linhas da tabela da direita e apenas as correspondências da tabela da esquerda, preenchendo com NULL onde não há correspondência na tabela da esquerda.
+2ª Opção (Externa Direira – Todas a partir da segunda): Retorna todas as linhas da tabela da direita e apenas as correspondências da tabela da esquerda, preenchendo com NULL onde não há correspondência na tabela da esquerda.
 
 Em ambos os casos, a tabela da direita é a tabela que tem valores nulos quando não há correspondência, mas as ordens das tabelas na relação alteram o comportamento da consulta.
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
