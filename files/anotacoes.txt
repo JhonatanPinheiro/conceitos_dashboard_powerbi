@@ -207,3 +207,25 @@ Se você tem uma lista de pedidos (tabela da direita) e uma lista de clientes (t
 
 
 
+===============PYTHON NO POWERBI====================
+Para conferir se já temos instalado e configurado o Python no PowerBI,  iremos verificar dentro da plataforma do powerBI se o caminha está reconhecido e setado:
+
+Arquivos->Opções e Configuração-> Opção -> Scripts do Python -> Verifique a caixa Diretórios base do Python detectados
+
+Caso não esteje deveremos instalar o python (https://www.python.org), com o powerBI fechado e depois verificar novamente!
+
+Depois iremos instalar a biblioteca chamada : matplotlib
+
+Abriremos o cmd: py -m pip install matplotlib
+Caso queira atualizar a biblioteca para ultima versão... Somente executar esse comando depois de ter instalado : python.exe -m pip install --upgrade pip
+
+Tudo pronto para começar a trabalhar ... Lembrando que podemos instalar também a biblioteca panda que é muito bom! 
+
+Somente executar esse comando no cmd
+
+pip install pandas
+
+
+Tudo certo!
+
+==========================================================================================
