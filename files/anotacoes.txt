@@ -226,6 +226,10 @@ Somente executar esse comando no cmd
 pip install pandas
 
 
+Também existe mais essa biblioteca muito usado seaborn
+
+py -m pip install seaborn
+
 Tudo certo!
 
 ==========================================================================================
