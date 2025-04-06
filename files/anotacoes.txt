@@ -233,3 +233,13 @@ py -m pip install seaborn
 Tudo certo!
 
 ==========================================================================================
+
+DIFERENÇAS 
+
+ANALISTA DE NEGÓCIO: Resposável por conhecer o negócio como um todo, possui olhar analítico, utiliza as ferramentas de análises de dados como usuário final
+ANALISTA DE DADOS: Responsável em montar a estrutura de dados (Arquitetura de dados), possui conhecimento nas ferramentas de BI, mas conhece mais a fundo os processos de ETL, Insights, resposável em montara arquitetura com um todo para manipular os dados (Infraestrutura)
+ANALISTA BI: Possui um pergil de desenvolvimento, resposável em colocar a mão na massa para desenvolver as análises , possui conhecimento técnico e prático em ferramentas como: PowerBI, Tableu, SQLSERVER, Python, Pentaho, Integration Services, Excel entre outras. Resposável por montar as análises e distribuir para as áreas para tomadas de decisão. Possuí conhecimento mais básicos sobre o negócio
+ANALISTA DE SISTEMA: É o Responsável pela coleta de regra de negócio, dos requisitos que o sistema deverá conter. Deverá indicar a melhor forma de desenvolvimento (Linguagem a ser usada). Verificar requisitos funcionais e não funcionais
+
+===========================================================================================
+
