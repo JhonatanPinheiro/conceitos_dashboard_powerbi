@@ -243,3 +243,7 @@ ANALISTA DE SISTEMA: É o Responsável pela coleta de regra de negócio, dos req
 
 ===========================================================================================
 
+FUNÇÕES DAX -> Utilizada apenas no relatório/dashboard
+LINGUAGEM M -> Utilizada apenas no powerquery
+
+
