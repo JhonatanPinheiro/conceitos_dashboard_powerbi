@@ -246,4 +246,103 @@ ANALISTA DE SISTEMA: É o Responsável pela coleta de regra de negócio, dos req
 FUNÇÕES DAX -> Utilizada apenas no relatório/dashboard
 LINGUAGEM M -> Utilizada apenas no powerquery
 
+===========================================================================================
+
+
+FATO X DIMENSÃO
+
+1 EXPLICAÇÃO
+
+Tabela Fato
+ - Contém os dados numéricos ou métricas que queremos analisar.
+ - Normalmente tem valores quantitativos, como vendas, lucros, quantidades etc.
+ - Geralmente está relacionada com várias tabelas dimensão.
+
+Exemplos de Tabela Fato:
+    Fato_Vendas: contém colunas como Data, ID_Produto, QuantidadeVendida, ValorVenda.
+    Fato_ChamadosTI: contém Data, ID_Usuário, TempoAtendimento, Status.
+
+Tabela Dimensão
+ - Contém informações descritivas (texto ou categorias) usadas para filtrar, agrupar ou detalhar os dados da tabela fato.
+ - Fornece o contexto para os números da Tabela Fato.
+
+Exemplos de Tabela Dimensão:
+    Dim_Produto: contém ID_Produto, NomeProduto, Categoria, Fabricante.
+    Dim_Tempo: contém Data, Mês, Ano, Trimestre, DiaSemana.
+
+
+2 EXPLICACAO
+
+✅ O que é uma Tabela Fato?
+    - É a tabela principal onde ficam os dados quantitativos (valores que podem ser somados, contados, analisados).
+    - Ela registra os eventos ou transações que ocorrem no negócio (ex: uma venda, um chamado, uma entrega).
+    - Contém chaves estrangeiras que apontam para as tabelas dimensão.
+
+🧠 Exemplo no contexto de um Banco de Dados de Vendas
+
+1. Tabela Fato: Fato_Vendas
+ID_Venda	ID_Produto	ID_Cliente	Data_Venda	Quantidade	Valor_Total
+1	101	201	2024-01-05	2	200.00
+2	102	202	2024-01-06	1	120.00
+
+*Essa tabela registra cada venda que aconteceu.
+*Os campos Quantidade e Valor_Total são métricas (fatos).
+*ID_Produto, ID_Cliente e Data_Venda são chaves estrangeiras que se conectam às dimensões.
+
+
+✅ O que é uma Tabela Dimensão?
+    - É uma tabela auxiliar que descreve os elementos das Tabelas Fato.
+    - Contém atributos textuais ou categóricos (ex: nome de cliente, nome do produto, cidade, mês).
+    - Fornece o contexto para entender os números.
+
+
+2. Tabela Dimensão: Dim_Produto
+ID_Produto	Nome_Produto	Categoria	Preco_Unitario
+101	Camisa Polo	Roupas	100.00
+102	Tênis Esportivo	Calçados	120.00
+
+3. Tabela Dimensão: Dim_Cliente
+ID_Cliente	Nome_Cliente	Cidade	Estado
+201	João Silva	São Paulo	SP
+202	Maria Souza	Curitiba	PR
+
+4. Tabela Dimensão: Dim_Tempo
+Data	Dia	Mês	Ano	Trimestre
+2024-01-05	05	Janeiro	2024	1
+2024-01-06	06	Janeiro	2024	1
+
+
+
+3 - EXPLICACAO
+🟨 Resumo:
+Característica	              Tabela Fato	 Tabela Dimensão
+Dados se repetem?	          ✅ Sim	       ❌ Não (ou bem pouco)
+Contém métricas (valores)?	  ✅ Sim	       ❌ Não
+Contém descrições?	          ❌ Não	       ✅ Sim
+
+
+✅ Resumo Final:
+Característica	              Tabela Fato	       Tabela Dimensão
+Representa eventos?	          ✅ Sim	              ❌ Não
+Dados podem se repetir?	      ✅ Sim (normal)	  ❌ Não (evitar)
+Contém descrições?	          ❌ Não	              ✅ Sim
+Contém métricas numéricas?	  ✅ Sim	              ❌ Não
+
+
+
+||FATO||
+Por que os dados se repetem na Tabela Fato?
+A Tabela Fato registra eventos ou transações, como:
+*Cada venda realizada
+*Cada pedido feito
+*Cada atendimento concluído
+*Como os mesmos produtos, clientes ou datas podem aparecer várias vezes, os IDs relacionados às dimensões se repetem.
+
+||DIMENSÃO||
+Por que os dados se repetem na Tabela Dimensão?
+A Tabela Dimensão serve como um cadastro único com informações descritivas (como nome do produto, categoria, cliente, etc.). Cada linha da tabela deve representar uma única entidade.
+Ou seja:
+*Um produto só deve aparecer uma vez na Dim_Produto.
+*Um cliente só deve aparecer uma vez na Dim_Cliente.
+*Uma data só deve aparecer uma vez na Dim_Tempo.
 
