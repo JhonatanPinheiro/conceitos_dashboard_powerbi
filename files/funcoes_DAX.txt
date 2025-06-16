@@ -47,4 +47,40 @@ FILTRO VENDEDOR = SELECTEDVALUE(CONSOLIDADAUNION[VENDEDOR], "Selecione um Vended
 
 --
 
+________________________________Criando uma variável________________________________
+TT VAR_MATRICULA = 
 
+-- Criando Variável
+VAR VariavelQtdMatricula = COUNTA(FATO_BASE[Matricula])
+RETURN 
+VariavelQtdMatricula
+
+
+-- TT MATRICULA = COUNTA((FATO_BASE[Matricula]))
+
+
+________________________________Criando uma variável________________________________
+TT VAR_MATRICULA = 
+
+-- Criando Variável
+VAR VariavelQtdMatricula = COUNTA(FATO_BASE[Matricula])
+RETURN 
+VariavelQtdMatricula
+
+
+-- TT MATRICULA = COUNTA((FATO_BASE[Matricula]))
+
+
+________________________________Criando uma variável________________________________
+
+PORC PROC TT = 
+VAR VariavelValorFiltro = CALCULATE(SUM(FATO_BASE[Mensalidade]), 
+                                ALL(FATO_BASE)
+                            )
+
+VAR VariavelValorVenda = [FAT MENSALIDADE]
+
+RETURN
+DIVIDE(VariavelValorVenda,VariavelValorFiltro)
+
+_____________________________________________________________________________________

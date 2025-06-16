@@ -346,3 +346,13 @@ Ou seja:
 *Um cliente só deve aparecer uma vez na Dim_Cliente.
 *Uma data só deve aparecer uma vez na Dim_Tempo.
 
+
+============================================================
+============================================================
+
+Link para download Programa para pegar cor
+
+https://colormania.br.download.it
+
+============================================================
+============================================================
